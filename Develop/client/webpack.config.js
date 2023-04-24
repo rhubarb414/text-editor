@@ -22,7 +22,14 @@ module.exports = () => {
         template: "./index.html",
         title: "JATE",
       }),
+      // Not sure the options needed here, revisit. Delete
+      new InjectManifest({
+        swSrc: "./src-sw.js",
+        swDest: "src-sw.js",
+      }),
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: "Just Another Text Editor",
         short_name: "JATE",
         description: "Take notes and write code with JS syntax highlighting!",
@@ -37,11 +44,6 @@ module.exports = () => {
             destination: path.join("assets", "icons"),
           },
         ],
-      }),
-      // Not sure the options needed here, revisit. Delete
-      new InjectManifest({
-        swSrc: "./src-sw.js",
-        swDest: "service-worker.js",
       }),
     ],
 
