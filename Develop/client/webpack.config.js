@@ -23,11 +23,11 @@ module.exports = () => {
         title: "JATE",
       }),
       new WebpackPwaManifest({
-        name: "JATE",
+        name: "Just Another Text Editor",
         short_name: "JATE",
-        description: "Just another text editor",
-        background_color: "#7eb4e2",
-        theme_color: "#7eb4e2",
+        description: "Take notes and write code with JS syntax highlighting!",
+        background_color: "#225ca3",
+        theme_color: "#225ca3",
         start_url: "./",
         publicPath: "./",
         icons: [
