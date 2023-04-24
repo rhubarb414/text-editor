@@ -41,6 +41,7 @@ module.exports = () => {
       // Not sure the options needed here, revisit. Delete
       new InjectManifest({
         swSrc: "./src-sw.js",
+        swDest: "service-worker.js",
       }),
     ],
 
