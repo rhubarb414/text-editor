@@ -1,15 +1,15 @@
 const butInstall = document.getElementById('buttonInstall');
 
 // Logic for installing the PWA
-// TODO: Add an event handler to the `beforeinstallprompt` event
+
+// Unable to get "beforeinstallprompt" to fire on chrome, safari, or safari iOS.
+// Thus, unable to test out the two subsequent functions. :(
 window.addEventListener('beforeinstallprompt', (event) => {
   window.deferredPrompt = event;
-  console.log('beforeinstallprompt event = ', window.preferredPrompt);
 
   butInstall.classList.toggle('hidden', false);
 });
 
-// TODO: Implement a click event handler on the `butInstall` element
 butInstall.addEventListener('click', async () => {
   console.log('clicked!');
   const promptEvents = window.deferredPrompt;
@@ -25,7 +25,6 @@ butInstall.addEventListener('click', async () => {
   butInstall.classList.toggle('hidden', true);
 });
 
-// TODO: Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
   window.deferredPrompt = null;
 });
