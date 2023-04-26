@@ -12,13 +12,14 @@ const initdb = async () =>
     },
   });
 
-// Logic to accept content and add it to the database
+// Logic to accept ontent and add it to the database
 export const putDb = async (content) => {
   const jateDb = await openDB('jate', 1);
   const transaction = jateDb.transaction('jate', 'readwrite');
   const store = transaction.objectStore('jate');
   const request = store.put({ id: 1, value: content });
   const results = await request;
+  console.log('Put data has been saved: ', results.value);
 };
 
 // Logic to get all the content from the database
