@@ -1,4 +1,12 @@
-# Text Editor Starter Code
+# Just Another Text Editor
+
+## Description
+
+This text editor is a progressive web app configured with workbox. It can function offline inside the browser, and it can be installed onto a device and act similarly as a native app.
+
+During development, I gained more experience with service workers and caching especially.
+
+Acceptance criteria for this app was as follows:
 
 ```
 AS A developer
@@ -44,3 +52,17 @@ WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application
 
 ```
+
+## Installation
+
+The app is deployed at [https://enigmatic-ridge-54477.herokuapp.com/](https://enigmatic-ridge-54477.herokuapp.com/)
+
+## Usage
+
+Type in text as you like, and there is automatic JS syntax highlighting. Text will be saved to the database when focus is changed. See this video demo to see it in action:
+
+[https://drive.google.com/file/d/1k2srtKu7QeMLJ0H9lWlVL89efLSUNim6/view?usp=sharing](https://drive.google.com/file/d/1k2srtKu7QeMLJ0H9lWlVL89efLSUNim6/view?usp=sharing)
+
+## License
+
+I have not licensed this code, as the bulk of it was provided by BCB.
